@@ -1,12 +1,7 @@
 package ru.usupov.bellintegrator;
 
-import java.util.List;
-
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 public class Tests extends WebDriverSettings {
@@ -17,7 +12,7 @@ public class Tests extends WebDriverSettings {
 		PageObjectGoogle pageObjectGoogle = new PageObjectGoogle(chromeDriver);
 		pageObjectGoogle.findByWord("Гладиолус");
 		pageObjectGoogle.putLinksToList();
-		Assert.assertTrue(pageObjectGoogle.getLinks().stream().anyMatch(x-> x.getText().contains("Гладиолус - Википедия")));
+		Assertions.assertTrue(pageObjectGoogle.getLinks().stream().anyMatch(x-> x.getText().contains("Гладиолус - Википедия")));
 	}
 	
 	@Test
@@ -26,7 +21,7 @@ public class Tests extends WebDriverSettings {
 		PageObjectGoogle pageObjectGoogle = new PageObjectGoogle(chromeDriver);
 		pageObjectGoogle.findByWord("Гладиолус");
 		pageObjectGoogle.putLinksToList();
-		Assert.assertTrue(pageObjectGoogle.checkingMoreThanThreeOrNot());
+		Assertions.assertTrue(pageObjectGoogle.checkingMoreThanThreeOrNot());
 	}
 	
 	
