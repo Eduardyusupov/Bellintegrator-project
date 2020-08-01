@@ -30,7 +30,7 @@ public class Steps {
 	@Step("Шаг 3. Убедится что результатов больше трёх")
 	public static void moreThanThreeLinksOrNot(PageObjectGoogle2 pageObject, WebDriver driver) {
 		CustomUtils.getScreen(driver);
-		Assertions.assertTrue(pageObject.checkingMoreThanThreeOrNot());
+		Assertions.assertTrue(pageObject.checkingMoreThanThreeOrNot(), "Ссылок меньше либо равно 3");
 	}
 
 }
