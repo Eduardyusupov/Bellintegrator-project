@@ -13,7 +13,7 @@ public class Tests extends WebDriverSettings {
 		pageObjectGoogle1.findByWord("Гладиолус");
 		PageObjectGoogle2 pageObjectGoogle2 = new PageObjectGoogle2(chromeDriver);
 		Steps.existOrNotWordOnSearchField(chromeDriver, pageObjectGoogle2);
-		Steps.sureExistLinkOrNot(pageObjectGoogle2, "Гладиолус - Википедия");
+		Steps.sureExistLinkOrNot(pageObjectGoogle2, "Гладиолус - Википедия", chromeDriver);
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ public class Tests extends WebDriverSettings {
 		pageObjectGoogle1.findByWord("Гладиолус");
 		PageObjectGoogle2 pageObjectGoogle2 = new PageObjectGoogle2(chromeDriver);
 		Steps.existOrNotWordOnSearchField(chromeDriver, pageObjectGoogle2);
-		Steps.moreThanThreeLinksOrNot(pageObjectGoogle2);
+		Steps.moreThanThreeLinksOrNot(pageObjectGoogle2, chromeDriver);
 	}
 	
 	
