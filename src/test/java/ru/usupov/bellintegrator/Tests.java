@@ -8,20 +8,22 @@ public class Tests extends WebDriverSettings {
 	
 	@Test
 	public void existLinkOrNot() {
-		chromeDriver.get("https://www.google.ru/");
 		PageObjectGoogle1 pageObjectGoogle1 = new PageObjectGoogle1(chromeDriver);
+		Steps.goOnGoogle(chromeDriver, pageObjectGoogle1);
 		pageObjectGoogle1.findByWord("Гладиолус");
 		PageObjectGoogle2 pageObjectGoogle2 = new PageObjectGoogle2(chromeDriver);
-		Assertions.assertTrue(pageObjectGoogle2.getLinks().stream().anyMatch(x-> x.getText().contains("Гладиолус - Википедия")));
+		Steps.existOrNotWordOnSearchField(chromeDriver, pageObjectGoogle2);
+		Steps.sureExistLinkOrNot(pageObjectGoogle2, "Гладиолус - Википедия");
 	}
 	
 	@Test
 	public void moreThanThreeLinksOrNot() {
-		chromeDriver.get("https://www.google.ru/");
-		PageObjectGoogle1 pageObjectGoogle = new PageObjectGoogle1(chromeDriver);
-		pageObjectGoogle.findByWord("Гладиолус");
+		PageObjectGoogle1 pageObjectGoogle1 = new PageObjectGoogle1(chromeDriver);
+		Steps.goOnGoogle(chromeDriver, pageObjectGoogle1);
+		pageObjectGoogle1.findByWord("Гладиолус");
 		PageObjectGoogle2 pageObjectGoogle2 = new PageObjectGoogle2(chromeDriver);
-		Assertions.assertTrue(pageObjectGoogle2.checkingMoreThanThreeOrNot());
+		Steps.existOrNotWordOnSearchField(chromeDriver, pageObjectGoogle2);
+		Steps.moreThanThreeLinksOrNot(pageObjectGoogle2);
 	}
 	
 	
