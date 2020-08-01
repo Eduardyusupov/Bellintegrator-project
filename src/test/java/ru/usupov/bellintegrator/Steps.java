@@ -27,7 +27,7 @@ public class Steps {
 	
 	@Step("Шаг 3. Убедится что результатов больше трёх")
 	public static void moreThanThreeLinksOrNot(PageObjectGoogle2 pageObject) {
-		pageObject.checkingMoreThanThreeOrNot();
+		Assertions.assertTrue(pageObject.checkingMoreThanThreeOrNot());
 	}
 
 }
