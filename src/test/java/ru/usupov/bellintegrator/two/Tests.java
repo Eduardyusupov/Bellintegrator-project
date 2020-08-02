@@ -9,6 +9,6 @@ public class Tests extends WebDriverSettings{
 		PageObjectYandexMarket pageObjectYandexMarket = new PageObjectYandexMarket(chromeDriver);
 		pageObjectYandexMarket.findByWord("Телефоны");
 		PageObjectYandexMarketWithResults pageObjectYandexMarketWithResults = new PageObjectYandexMarketWithResults(chromeDriver);
-		Steps.choosePhonesOnMarket(pageObjectYandexMarketWithResults);
+		Steps.choosePhonesOnMarket(pageObjectYandexMarketWithResults, chromeDriver);
 	}
 }
