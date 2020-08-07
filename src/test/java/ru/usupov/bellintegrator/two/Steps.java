@@ -12,4 +12,20 @@ public class Steps {
 		CustomUtils.getScreen(driver);
 		Assertions.assertTrue(pageObject.whatWordInSearch("Телефоны"));
 	}
+	
+	@Step("Установить фильтр айфоны")
+	public static void selectIphoneFilter(PageObjectYandexMarketWithResults pageObject, WebDriver driver) {
+		CustomUtils.getScreen(driver);
+		Assertions.assertTrue(pageObject.isSelected());
+	}
+	
+	@Step("Убедится что на всех страницах (если их несколько), присутствуют только айфоны.")
+	public static void sureThereIsOnlyIphones(PageObjectYandexMarketWithResults pageObject, WebDriver driver) throws InterruptedException {
+		CustomUtils.getScreen(driver);
+		Assertions.assertTrue(pageObject.isThereOnlyIphones("iPhone"));
+	}
+	
+	
+	
+	
 }

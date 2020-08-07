@@ -1,5 +1,7 @@
 package ru.usupov.bellintegrator.two;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +19,11 @@ public class PageObjectYandexMarket {
 		searchField = driver.findElement(By.xpath("//form[@action='/search']//input[@id='header-search']"));
 	}
 	
-	public void findByWord(String word) {
+	public void findByWord(String word) throws InterruptedException {
 		searchField.click();
 		searchField.sendKeys(word);
 		searchField.sendKeys(Keys.ENTER);
+		Thread.sleep(4000);
 	}
 	
 
