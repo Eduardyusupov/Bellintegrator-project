@@ -10,19 +10,19 @@ public class Steps {
 	@Step("В яндекс маркете выбрать телефоны.")
 	public static void choosePhonesOnMarket(PageObjectYandexMarketWithResults pageObject, WebDriver driver) {
 		CustomUtils.getScreen(driver);
-		Assertions.assertTrue(pageObject.whatWordInSearch("Телефоны"));
+		Assertions.assertTrue(pageObject.whatWordInSearch("Телефоны"), "В строку поиска не введено слово 'Телефоны'");
 	}
 	
 	@Step("Установить фильтр айфоны")
 	public static void selectIphoneFilter(PageObjectYandexMarketWithResults pageObject, WebDriver driver) {
 		CustomUtils.getScreen(driver);
-		Assertions.assertTrue(pageObject.isSelected());
+		Assertions.assertTrue(pageObject.isSelected(), "Фильтр на Айфоны не установлен");
 	}
 	
 	@Step("Убедится что на всех страницах (если их несколько), присутствуют только айфоны.")
 	public static void sureThereIsOnlyIphones(PageObjectYandexMarketWithResults pageObject, WebDriver driver) throws InterruptedException {
 		CustomUtils.getScreen(driver);
-		Assertions.assertTrue(pageObject.isThereOnlyIphones("iPhone"));
+		Assertions.assertTrue(pageObject.isThereOnlyIphones("iPhone"), "Нa странице не все элементы Айфоны");
 	}
 	
 	
