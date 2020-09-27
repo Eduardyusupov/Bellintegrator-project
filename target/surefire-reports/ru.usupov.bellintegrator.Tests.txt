@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ru.usupov.bellintegrator.Tests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 58.91 s <<< FAILURE! - in ru.usupov.bellintegrator.Tests
+ru.usupov.bellintegrator.Tests.existLinkOrNot  Time elapsed: 38.494 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Указанной ссылки не существует ==> expected: <true> but was: <false>
+	at ru.usupov.bellintegrator.Tests.existLinkOrNot(Tests.java:16)
+

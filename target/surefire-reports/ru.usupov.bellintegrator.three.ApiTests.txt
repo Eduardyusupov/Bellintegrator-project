@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ru.usupov.bellintegrator.three.ApiTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.071 s <<< FAILURE! - in ru.usupov.bellintegrator.three.ApiTests
+ru.usupov.bellintegrator.three.ApiTests.checkingAvatarsSameOrNot  Time elapsed: 10.888 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Аватары разные ==> expected: <true> but was: <false>
+	at ru.usupov.bellintegrator.three.ApiTests.checkingAvatarsSameOrNot(ApiTests.java:33)
+
