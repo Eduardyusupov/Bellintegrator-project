@@ -32,7 +32,8 @@ public class CustomUtils {
 	
 	@Attachment(type = "application/json", fileExtension = ".txt")
 	public static byte[] getBytes(WebDriver driver) throws IOException {
-		return driver.getPageSource().getBytes();
+		String hello = "hello";
+		return hello.getBytes();
 	     
 	}
 	
