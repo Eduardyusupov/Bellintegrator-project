@@ -13,7 +13,6 @@ public class PageObjectYandexPogodaSergie {
 	private WebDriver driver;
 	
 	private WebElement pogodaSergie;
-	private String pogodaSergiePosad = "Погода в Сергиевом Посаде = " + pogodaSergie.getText();
 	
 	public PageObjectYandexPogodaSergie(WebDriver driver) {
 		this.driver = driver;
@@ -21,8 +20,9 @@ public class PageObjectYandexPogodaSergie {
 	}
 	
 	@Attachment(type = "application/json", fileExtension = ".txt")
-	public  byte[] getPogodaSergie(WebDriver driver) throws IOException {
-		return pogodaSergiePosad.getBytes();
+	public  byte[] getPogodaSergiePosad(WebDriver driver) throws IOException {
+		
+		return pogodaSergie.getText().getBytes();
 	     
 	}
 	

@@ -31,7 +31,7 @@ public class Steps {
 	
 	@Step("Cохранить как аттачмент для Allure Report текстовый файл в котором будет текущая температура")
 	public void makingTxtFile(WebDriver driver, PageObjectYandexPogodaSergie pageObject) throws IOException {
-		pageObject.getPogodaSergie(driver);
+		pageObject.getPogodaSergiePosad(driver);
 	
 	}
 	
