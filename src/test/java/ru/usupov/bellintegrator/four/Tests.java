@@ -21,7 +21,8 @@ public class Tests extends WebDriverSettings{
 		PageObjectYandexPogodaWithResults pageObjectYandexPogodaWithResults = new PageObjectYandexPogodaWithResults(chromeDriver);
 		steps.existingPhraseOrNot(pageObjectYandexPogodaWithResults, chromeDriver);
 		pageObjectYandexPogodaWithResults.clickOnLink("Сергиев Посад, Москва и Московская область");
-		steps.makingTxtFile(chromeDriver);
+		PageObjectYandexPogodaSergie pageObjectYandexPogodaSergie = new PageObjectYandexPogodaSergie(chromeDriver);
+		steps.makingTxtFile(chromeDriver, pageObjectYandexPogodaSergie);
 		
 		
 		
